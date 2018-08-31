@@ -10,6 +10,7 @@ return [
     'id' => 'app-frontend',
     'basePath' => dirname(__DIR__),
     'bootstrap' => ['log'],
+    'layout' => 'common',
     'controllerNamespace' => 'frontend\controllers',
     'components' => [
         'request' => [
