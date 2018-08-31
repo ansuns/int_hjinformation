@@ -69,11 +69,10 @@ $assetUrl = AppAsset::register($this)->baseUrl;
                 </div>
                 <div class="collapse navbar-collapse">
                     <ul class="nav navbar-nav navbar-right">
-                        <li class="active"><a href="index.html">Home</a></li>
+                        <li class="active"><a href="<?= \yii\helpers\Url::toRoute(['/']) ?>">Home</a></li>
                         <li class="dropdown"><a href="#">Pages <i class="fa fa-angle-down"></i></a>
                             <ul role="menu" class="sub-menu">
                                 <li><a href="<?= \yii\helpers\Url::toRoute(['site/about']) ?>">About</a></li>
-                                <li><a href="aboutus2.html">About 2</a></li>
                                 <li><a href="service.html">Services</a></li>
                                 <li><a href="pricing.html">Pricing</a></li>
                                 <li><a href="contact.html">Contact us</a></li>
