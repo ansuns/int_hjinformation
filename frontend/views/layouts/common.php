@@ -62,7 +62,7 @@ $assetUrl = AppAsset::register($this)->baseUrl;
                         <span class="icon-bar"></span>
                     </button>
 
-                    <a class="navbar-brand" href="index.html">
+                    <a class="navbar-brand" href="/">
                         <h1><img src="<?= $assetUrl ?>/images/logo.png" alt="logo"></h1>
                     </a>
 
@@ -73,35 +73,26 @@ $assetUrl = AppAsset::register($this)->baseUrl;
                         <li class="dropdown"><a href="#">Pages <i class="fa fa-angle-down"></i></a>
                             <ul role="menu" class="sub-menu">
                                 <li><a href="<?= \yii\helpers\Url::toRoute(['site/about']) ?>">About</a></li>
-                                <li><a href="service.html">Services</a></li>
-                                <li><a href="pricing.html">Pricing</a></li>
-                                <li><a href="contact.html">Contact us</a></li>
-                                <li><a href="contact2.html">Contact us 2</a></li>
-                                <li><a href="404.html">404 error</a></li>
-                                <li><a href="coming-soon.html">Coming Soon</a></li>
+                                <li><a href="<?= \yii\helpers\Url::toRoute(['site/service']) ?>">Services</a></li>
+                                <li><a href="<?= \yii\helpers\Url::toRoute(['site/pricing']) ?>">Pricing</a></li>
+                                <li><a href="<?= \yii\helpers\Url::toRoute(['site/contact']) ?>">Contact us</a></li>
+                                <li><a href="<?= \yii\helpers\Url::toRoute(['site/error-404']) ?>">404 error</a></li>
+                                <li><a href="<?= \yii\helpers\Url::toRoute(['site/coming-soon']) ?>">Coming Soon</a></li>
                             </ul>
                         </li>
-                        <li class="dropdown"><a href="blog.html">Blog <i class="fa fa-angle-down"></i></a>
+                        <li class="dropdown"><a href="<?= \yii\helpers\Url::toRoute(['site/blog']) ?>">Blog <i class="fa fa-angle-down"></i></a>
                             <ul role="menu" class="sub-menu">
-                                <li><a href="blog.html">Blog Default</a></li>
-                                <li><a href="blogtwo.html">Timeline Blog</a></li>
-                                <li><a href="blogone.html">2 Columns + Right Sidebar</a></li>
-                                <li><a href="blogthree.html">1 Column + Left Sidebar</a></li>
-                                <li><a href="blogfour.html">Blog Masonary</a></li>
-                                <li><a href="blogdetails.html">Blog Details</a></li>
+                                <li><a href="<?= \yii\helpers\Url::toRoute(['site/blog']) ?>">Blog Default</a></li>
+                                <li><a href="<?= \yii\helpers\Url::toRoute(['site/blog-details']) ?>">Blog Details</a></li>
                             </ul>
                         </li>
-                        <li class="dropdown"><a href="portfolio.html">Portfolio <i class="fa fa-angle-down"></i></a>
+                        <li class="dropdown"><a href="<?= \yii\helpers\Url::toRoute(['site/about']) ?>">Portfolio <i class="fa fa-angle-down"></i></a>
                             <ul role="menu" class="sub-menu">
-                                <li><a href="portfolio.html">Portfolio Default</a></li>
-                                <li><a href="portfoliofour.html">Isotope 3 Columns + Right Sidebar</a></li>
-                                <li><a href="portfolioone.html">3 Columns + Right Sidebar</a></li>
-                                <li><a href="portfoliotwo.html">3 Columns + Left Sidebar</a></li>
-                                <li><a href="portfoliothree.html">2 Columns</a></li>
-                                <li><a href="portfolio-details.html">Portfolio Details</a></li>
+                                <li><a href="<?= \yii\helpers\Url::toRoute(['site/portfolio']) ?>">Portfolio Default</a></li>
+                                <li><a href="<?= \yii\helpers\Url::toRoute(['site/portfolio-details']) ?>">Portfolio Details</a></li>
                             </ul>
                         </li>
-                        <li><a href="shortcodes.html ">Shortcodes</a></li>
+                        <li><a href="<?= \yii\helpers\Url::toRoute(['site/shortcodes']) ?>">Shortcodes</a></li>
                     </ul>
                 </div>
                 <div class="search">
@@ -188,8 +179,8 @@ $assetUrl = AppAsset::register($this)->baseUrl;
                 </div>
                 <div class="col-sm-12">
                     <div class="copyright-text text-center">
-                        <p>&copy; Your Company 2014. All Rights Reserved.</p>
-                        <p>Designed by <a target="_blank" href="http://www.themeum.com">Themeum</a></p>
+                        <p>&copy; ANSUNS 2018. All Rights Reserved.</p>
+                        <p>Designed by <a target="_blank" href="/">ANSUNS</a></p>
                     </div>
                 </div>
             </div>
