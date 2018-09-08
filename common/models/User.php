@@ -56,6 +56,7 @@ class User extends ActiveRecord implements IdentityInterface
             [['username', 'email'], 'string', 'max' => 255],
             ['email', 'email'],
             ['status', 'default', 'value' => self::STATUS_ACTIVE],
+            ['auth_key', 'default', 'value' => Yii::$app->security->generateRandomString()],
             ['status', 'in', 'range' => [self::STATUS_ACTIVE, self::STATUS_DELETED]],
             ['status', 'default', 'value' => self::STATUS_ACTIVE],
             ['status', 'in', 'range' => [self::STATUS_ACTIVE, self::STATUS_DELETED]],

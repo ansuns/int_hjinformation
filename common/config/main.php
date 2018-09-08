@@ -10,5 +10,12 @@ return [
         'cache' => [
             'class' => 'yii\caching\FileCache',
         ],
+        'authManager' => [
+            'class' => 'yii\rbac\DbManager',
+            'itemTable' => 'auth_item',
+            'assignmentTable' => 'auth_assignment',
+            'itemChildTable' => 'auth_item_child',
+            //'db' => 'yangs',//main-local.php已配置则不用在此配置了
+        ],
     ],
 ];
