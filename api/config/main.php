@@ -21,17 +21,17 @@ return [
             'csrfParam' => '_csrf-api',
         ],
         'user'         => [
-            'identityClass'   => 'common\models\User',
+            'identityClass'   => 'api\models\ApiUser',
             'enableAutoLogin' => true,
             'identityCookie'  => ['name' => '_identity-api', 'httpOnly' => true],
             'enableSession' => false, //设置 enableSession 属性为 false
             'loginUrl' => null, //显示一个HTTP 403 错误而不是跳转到登录界面.
         ],
-        'session'      => [
+/*        'session'      => [
             // this is the name of the session cookie used for login on the backend
             'name' => 'advanced-api',
 
-        ],
+        ],*/
         'log'          => [
             'traceLevel' => YII_DEBUG ? 3 : 0,
             'targets'    => [
@@ -52,7 +52,14 @@ return [
             'rules'               => [
                 [
                     'class'      => 'yii\rest\UrlRule',
-                    'controller' => ['v1/baremetal','controller' => 'v1/default'],
+                    'controller' => ['v1/icp'],
+                ],
+                [
+                    'class'      => 'yii\rest\UrlRule',
+                    'controller' => ['v1/user'=>'v1/default'],
+                    'extraPatterns' => [
+                        'POST login' => 'login',
+                    ]
                 ],
             ],
         ],

@@ -8,9 +8,9 @@ use api\controllers\ApiBaseController;
 /**
  * Default controller for the `v1` module
  */
-class BaremetalController extends ApiBaseController
+class IcpController extends ApiBaseController
 {
-    public $modelClass = 'common\models\Baremetal';
+    public $modelClass = 'common\models\IcpMain';
     /**
      * Renders the index view for the module
      * @return string
