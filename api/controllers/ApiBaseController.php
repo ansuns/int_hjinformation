@@ -23,6 +23,11 @@ class ApiBaseController extends ActiveController
             $behaviors = parent::behaviors();
             $behaviors['authenticator'] = [
                 'class' => QueryParamAuth::className(),
+                //不需要认证的接口
+                'optional' => [
+                    'login',
+                    'loginout'
+                ]
             ];
             return $behaviors;
         }

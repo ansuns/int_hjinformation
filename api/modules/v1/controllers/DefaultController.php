@@ -2,14 +2,14 @@
 
 namespace api\modules\v1\controllers;
 
+use api\controllers\ApiBaseController;
 use api\models\ApiUserLoginForm;
 use Yii;
-use yii\rest\ActiveController;
 
 /**
  * Default controller for the `v1` module
  */
-class DefaultController extends ActiveController
+class DefaultController extends ApiBaseController
 {
     public $modelClass = 'api\models\ApiUser';
     /**
