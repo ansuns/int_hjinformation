@@ -24,6 +24,11 @@ class DefaultController extends ApiBaseController
         $model->username = Yii::$app->request->post('username');
         $model->password = Yii::$app->request->post('password');
 
+        //PC 表单登录
+        if (!$model->username && !$model->password) {
+            $model->load(Yii::$app->request->post());
+        }
+
         if ($model->login()) {
             return ['access_token' => $model->login()];
         } else {
