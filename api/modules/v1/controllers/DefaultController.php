@@ -29,8 +29,8 @@ class DefaultController extends ApiBaseController
             $model->load(Yii::$app->request->post());
         }
 
-        if ($model->login()) {
-            return ['access_token' => $model->login()];
+        if ($res = $model->login()) {
+            return ['access_token' => $res];
         } else {
             $model->validate();
             return $model;

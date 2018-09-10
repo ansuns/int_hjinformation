@@ -44,7 +44,13 @@ return [
         'errorHandler' => [
             'errorAction' => 'site/error',
         ],
-
+        'redis' => [
+            'class' => 'yii\redis\Connection',
+            'hostname' => '192.168.99.100',
+            'port' => 7369,
+            'database' => 0,
+            'dataTimeout' => 60 * 60 * 2,//2小时
+        ],
         'urlManager' => [
             'enablePrettyUrl'     => true,
             'enableStrictParsing' => false,

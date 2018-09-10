@@ -58,6 +58,7 @@ class ApiUserLoginForm extends Model
         if ($this->validate()) {
            $accessToken = $this->_user->generateAccessToken();
            $this->_user->save();
+           Yii::$app->redis->set($accessToken, serialize($this->_user));
            return $accessToken;
         } else {
             return false;
