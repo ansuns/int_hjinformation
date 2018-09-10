@@ -26,7 +26,8 @@ class ApiBaseController extends ActiveController
                 //不需要认证的接口
                 'optional' => [
                     'login',
-                    'loginout'
+                    'loginout',
+                    'upload'
                 ]
             ];
             return $behaviors;

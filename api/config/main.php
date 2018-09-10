@@ -59,6 +59,7 @@ return [
                     'controller' => ['v1/user'=>'v1/default'],
                     'extraPatterns' => [
                         'POST login' => 'login',
+                        'POST upload' => 'upload',
                     ]
                 ],
             ],

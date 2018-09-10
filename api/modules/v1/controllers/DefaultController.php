@@ -4,7 +4,9 @@ namespace api\modules\v1\controllers;
 
 use api\controllers\ApiBaseController;
 use api\models\ApiUserLoginForm;
+use common\models\UploadForm;
 use Yii;
+use yii\web\UploadedFile;
 
 /**
  * Default controller for the `v1` module
@@ -27,6 +29,27 @@ class DefaultController extends ApiBaseController
         } else {
             $model->validate();
             return $model;
+        }
+
+    }
+
+    public function actionUpload()
+    {
+        $model = new UploadForm();
+
+        if (Yii::$app->request->isPost){
+
+            $model->file = UploadedFile::getInstancesByName('file');
+            $fileName = $model->upload() ;
+
+            if ( $fileName ) {
+                // 文件上传成功
+                return $fileName;
+            }else{
+                return $model->getErrors();
+            }
+        }else{
+            return  false;
         }
 
     }
