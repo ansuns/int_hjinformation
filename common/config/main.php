@@ -7,11 +7,15 @@ return [
     ],
     'vendorPath' => dirname(dirname(__DIR__)) . '/vendor',
     'components' => [
+        'helper' => [
+            'class'=>'common\helpers\Helper',
+        ],
         'redis' => [
             'class' => 'yii\redis\Connection',
             'hostname' => '192.168.99.100',
             'port' => 7369,
             'database' => 0,
+            'dataTimeout' => 2*60*60
         ],
         'cache' => [
             'class' => 'yii\caching\FileCache',

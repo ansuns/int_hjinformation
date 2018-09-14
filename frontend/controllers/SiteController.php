@@ -88,7 +88,32 @@ class SiteController extends Controller
         }
 
         $model = new ApiUserLoginForm();
-        if ($model->load(Yii::$app->request->post()) && $model->login()) {
+        if ($model->load(Yii::$app->request->post())) {
+            $username = Yii::$app->request->post('username');
+            $password = Yii::$app->request->post('password');
+
+            //PC 表单登录
+            if (!$username && !$password) {
+                $model = new ApiUserLoginForm();
+                $model->load(Yii::$app->request->post());
+                $username = $model->username;
+                $password = $model->password;
+                unset($model);
+            }
+            $data = [
+                'username' => $username,
+                'password' => $password
+            ];
+            $url = 'http://api.ncvt.com/v1/user/login';
+            $loginInfo = Yii::$app->helper->curl($url, $data);
+            if ($loginInfo) {
+                $cookie = new \yii\web\Cookie([
+                    'name' => 'LOGIN',
+                    'expire' => time() + 60*60*24*7,
+                    'value' => $loginInfo
+                ]);
+                Yii::$app->response->getCookies()->add($cookie);
+            }
             return $this->goBack();
         } else {
             $model->password = '';
