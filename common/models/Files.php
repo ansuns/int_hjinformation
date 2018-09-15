@@ -10,6 +10,7 @@ use Yii;
  * @property int $id
  * @property string $file
  * @property string $path
+ * @property string $origin
  * @property string $url
  * @property string $extension
  * @property string $create_time
@@ -34,7 +35,7 @@ class Files extends \yii\db\ActiveRecord
         return [
             [['create_time', 'update_time'], 'safe'],
             [['status'], 'integer'],
-            [['file', 'path', 'url', 'extension'], 'string', 'max' => 255],
+            [['file', 'path', 'origin', 'url', 'extension'], 'string', 'max' => 255],
         ];
     }
 
@@ -47,6 +48,7 @@ class Files extends \yii\db\ActiveRecord
             'id' => 'ID',
             'file' => 'File',
             'path' => 'Path',
+            'origin' => 'Origin',
             'url' => 'Url',
             'extension' => 'Extension',
             'create_time' => 'Create Time',

@@ -31,11 +31,15 @@ class UploadForm extends Model
         if ($this->validate()) {
             $save = [];
             foreach ($this->file as $file) {
-                $fileName = 'uploads/' . $file->baseName . '.' . $file->extension;
-                $file->saveAs($fileName);
+                $fileName = 'uploads/' . Yii::$app->security->generateRandomString().'.' . $file->extension;
+                $res = $file->saveAs($fileName);
+                if ($res == false) {
+                    break;
+                }
                 $save[] = [
                     'file' => $fileName,
                     'path' => 'uploads/',
+                    'origin' => $file->baseName.'.'.$file->extension,
                     'url' => '',
                     'extension' => $file->extension,
                     'create_time' => date('Y-m-d H:i:s'),
@@ -45,8 +49,8 @@ class UploadForm extends Model
 
 
             }
-            Yii::$app->db->createCommand()->batchInsert('files', ['file','path','url','extension','create_time','update_time','status'], $save)->execute();
-            return true;
+            Yii::$app->db->createCommand()->batchInsert('files', ['file','path','origin','url','extension','create_time','update_time','status'], $save)->execute();
+            return $save;
         }
         return false;
 
