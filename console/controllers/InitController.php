@@ -55,12 +55,16 @@ class InitController extends Controller
         return 0;
     }
 
+    /**
+     * 创建权限
+     * @throws \yii\db\Exception
+     */
     public function actionRbac()
     {
         $trans = Yii::$app->db->beginTransaction();
         try {
             //构建控制器目录
-            $dir = Yii::getAlias('backedend'). '/controllers';
+            $dir = Yii::getAlias('backend'). '/modules/admin/controllers';
             //找到控制器目录下的所有文件
             $controllers = glob($dir. '/*');
             $permissions = [];
@@ -91,8 +95,55 @@ class InitController extends Controller
             echo "import success \n";
         } catch(\Exception $e) {
             $trans->rollback();
+            echo $e->getMessage();
             echo "import failed \n";
         }
+    }
+
+    /**
+     * 创建角色
+     * @throws \Exception
+     */
+    public function actionRole()
+    {
+        echo "创建角色...\n";
+        $auth = Yii::$app->authManager;
+        $name = $this->prompt('角色名称...');
+        $role = $auth->createRole($name);
+        $role->description = '创建了 ' . $name. ' 角色';
+        $auth->add($role);
+    }
+
+
+    /*
+     * 将权限赋给角色
+     */
+    public function actionChild()
+    {
+        $role = $this->prompt('角色名称...');
+        $items['role'] = $role;
+        $permission = $this->prompt('权限名称...');
+        $items['permission'] = $permission;
+        $auth = Yii::$app->authManager;
+        $parent = $auth->createRole($items['role']);                //创建角色对象
+        $child = $auth->createPermission($items['permission']);     //创建权限对象
+        $auth->addChild($parent, $child);                           //添加对应关系
+    }
+
+
+    /**
+     * 将角色赋给用户
+     * @param $items
+     * @throws \Exception
+     */
+    public function actionPower()
+    {
+        echo "分配角色...\n";
+        $items['role'] = $this->prompt('角色名称...');
+        $auth = Yii::$app->authManager;
+        $role = $auth->createRole($items['role']);                //创建角色对象
+        $user_id = 1;                                             //获取用户id，此处假设用户id=1
+        $auth->assign($role, $user_id);                           //添加对应关系
     }
 
 }
