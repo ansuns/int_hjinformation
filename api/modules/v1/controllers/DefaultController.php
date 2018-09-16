@@ -14,6 +14,9 @@ use yii\web\UploadedFile;
 class DefaultController extends ApiBaseController
 {
     public $modelClass = 'api\models\ApiUser';
+    public function actionIndex(){
+
+    }
     /**
      * Renders the index view for the module
      * @return string

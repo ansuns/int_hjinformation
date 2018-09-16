@@ -10,6 +10,7 @@ return [
     'id'                  => 'app-api',
     'basePath'            => dirname(__DIR__),
     'controllerNamespace' => 'api\controllers',
+    'defaultRoute' => 'v1/default/index',
     'bootstrap'           => ['log'],
     'modules'             => [
         'v1' => [
