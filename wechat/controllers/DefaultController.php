@@ -2,6 +2,7 @@
 namespace wechat\controllers;
 
 use api\models\ApiUserLoginForm;
+use EasyWeChat\Factory;
 use Yii;
 use yii\base\InvalidParamException;
 use yii\web\BadRequestHttpException;
@@ -19,13 +20,23 @@ use wechat\models\ContactForm;
  */
 class DefaultController extends Controller
 {
+    public function actionIndex()
+    {
+        $config = Yii::$app->params['wechat'];
+        $app = Factory::officialAccount($config);
+        $response = $app->server->serve();
+
+        // 将响应输出
+        $response->send(); // Laravel 里请使用：return $response;
+
+    }
 
     /**
      * Displays homepage.
      *
      * @return mixed
      */
-    public function actionIndex()
+    public function actionIndexx()
     {
         if (!$this->checkSignature()) {
             return "error sign";
@@ -35,6 +46,8 @@ class DefaultController extends Controller
         if (array_key_exists("echostr" ,$_GET) && $_GET['echostr']) {
             echo $_GET['echostr'];
         }
+
+
         echo "success";
     }
 
