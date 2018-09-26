@@ -26,7 +26,7 @@ class DefaultController extends Controller
         $app = Factory::officialAccount($config);
 
         $app->server->push(function ($message) {
-            return "您好！:".$message;
+            return "您好！";
         });
 
         $response = $app->server->serve();
