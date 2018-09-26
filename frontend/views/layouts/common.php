@@ -72,27 +72,27 @@ $assetUrl = AppAsset::register($this)->baseUrl;
                         <li class="active"><a href="/">Home</a></li>
                         <li class="dropdown"><a href="#">Pages <i class="fa fa-angle-down"></i></a>
                             <ul role="menu" class="sub-menu">
-                                <li><a href="<?= \yii\helpers\Url::toRoute(['site/about']) ?>">About</a></li>
-                                <li><a href="<?= \yii\helpers\Url::toRoute(['site/service']) ?>">Services</a></li>
-                                <li><a href="<?= \yii\helpers\Url::toRoute(['site/pricing']) ?>">Pricing</a></li>
-                                <li><a href="<?= \yii\helpers\Url::toRoute(['site/contact']) ?>">Contact us</a></li>
-                                <li><a href="<?= \yii\helpers\Url::toRoute(['site/error-404']) ?>">404 error</a></li>
-                                <li><a href="<?= \yii\helpers\Url::toRoute(['site/coming-soon']) ?>">Coming Soon</a></li>
+                                <li><a href="<?= \yii\helpers\Url::toRoute(['default/about']) ?>">About</a></li>
+                                <li><a href="<?= \yii\helpers\Url::toRoute(['default/service']) ?>">Services</a></li>
+                                <li><a href="<?= \yii\helpers\Url::toRoute(['default/pricing']) ?>">Pricing</a></li>
+                                <li><a href="<?= \yii\helpers\Url::toRoute(['default/contact']) ?>">Contact us</a></li>
+                                <li><a href="<?= \yii\helpers\Url::toRoute(['default/error-404']) ?>">404 error</a></li>
+                                <li><a href="<?= \yii\helpers\Url::toRoute(['default/coming-soon']) ?>">Coming Soon</a></li>
                             </ul>
                         </li>
-                        <li class="dropdown"><a href="<?= \yii\helpers\Url::toRoute(['site/blog']) ?>">Blog <i class="fa fa-angle-down"></i></a>
+                        <li class="dropdown"><a href="<?= \yii\helpers\Url::toRoute(['default/blog']) ?>">Blog <i class="fa fa-angle-down"></i></a>
                             <ul role="menu" class="sub-menu">
-                                <li><a href="<?= \yii\helpers\Url::toRoute(['site/blog']) ?>">Blog Default</a></li>
-                                <li><a href="<?= \yii\helpers\Url::toRoute(['site/blog-details']) ?>">Blog Details</a></li>
+                                <li><a href="<?= \yii\helpers\Url::toRoute(['default/blog']) ?>">Blog Default</a></li>
+                                <li><a href="<?= \yii\helpers\Url::toRoute(['default/blog-details']) ?>">Blog Details</a></li>
                             </ul>
                         </li>
-                        <li class="dropdown"><a href="<?= \yii\helpers\Url::toRoute(['site/about']) ?>">Portfolio <i class="fa fa-angle-down"></i></a>
+                        <li class="dropdown"><a href="<?= \yii\helpers\Url::toRoute(['default/about']) ?>">Portfolio <i class="fa fa-angle-down"></i></a>
                             <ul role="menu" class="sub-menu">
-                                <li><a href="<?= \yii\helpers\Url::toRoute(['site/portfolio']) ?>">Portfolio Default</a></li>
-                                <li><a href="<?= \yii\helpers\Url::toRoute(['site/portfolio-details']) ?>">Portfolio Details</a></li>
+                                <li><a href="<?= \yii\helpers\Url::toRoute(['default/portfolio']) ?>">Portfolio Default</a></li>
+                                <li><a href="<?= \yii\helpers\Url::toRoute(['default/portfolio-details']) ?>">Portfolio Details</a></li>
                             </ul>
                         </li>
-                        <li><a href="<?= \yii\helpers\Url::toRoute(['site/shortcodes']) ?>">Shortcodes</a></li>
+                        <li><a href="<?= \yii\helpers\Url::toRoute(['default/shortcodes']) ?>">Shortcodes</a></li>
                     </ul>
                 </div>
                 <div class="search">

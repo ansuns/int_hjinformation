@@ -35,17 +35,10 @@ return [
             ],
         ],
         'errorHandler' => [
-            'errorAction' => 'site/error',
+            'errorAction' => 'error/error',
         ],
 
-        'urlManager' => [
-            'enablePrettyUrl' => true,
-            'showScriptName' => false,
-            'suffix' => '.html',
-            'rules' => [
-            ],
-        ],
-
+        'urlManager' => require "router.php"
     ],
     'params' => $params,
 ];
