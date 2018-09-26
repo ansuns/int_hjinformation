@@ -31,6 +31,7 @@ class DefaultController extends Controller
             return "error sign";
         }
 
+        //验证通过后不再发送echostr,而是发送XML数据了
         if (array_key_exists("echostr" ,$_GET) && $_GET['echostr']) {
             echo $_GET['echostr'];
         }
