@@ -27,6 +27,30 @@ class DefaultController extends Controller
      */
     public function actionIndex()
     {
-        echo "success";
+        if (!$this->checkSignature()) {
+            return "error sign";
+        }
+
+        if (array_key_exists("echostr" ,$_GET) && $_GET['echostr']) {
+            echo $_GET['echostr'];
+        }
+    }
+
+    private function checkSignature()
+    {
+        $signature = $_GET["signature"];
+        $timestamp = $_GET["timestamp"];
+        $nonce = $_GET["nonce"];
+
+        $tmpArr = array($timestamp, $nonce);
+        sort($tmpArr, SORT_STRING);
+        $tmpStr = implode( $tmpArr );
+        $tmpStr = sha1( $tmpStr );
+
+        if( $signature = $signature ){
+            return true;
+        }else{
+            return false;
+        }
     }
 }
