@@ -1,0 +1,2 @@
+[2018-09-26 06:56:39] NULL.DEBUG: Request received: {"method":"GET","uri":"http://ll.test/ncvt/wechat/web/index.php/?r=default","content-type":null,"content":""} 
+[2018-09-26 06:56:39] NULL.DEBUG: Server response created: {"content":"success"} 
