@@ -35,6 +35,7 @@ class DefaultController extends Controller
         if (array_key_exists("echostr" ,$_GET) && $_GET['echostr']) {
             echo $_GET['echostr'];
         }
+        echo "success";
     }
 
     private function checkSignature()
