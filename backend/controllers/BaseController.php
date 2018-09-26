@@ -16,6 +16,7 @@ class BaseController extends Controller
     public function beforeAction($action)
     {
         parent::actions();
+        return true;
         $action = Yii::$app->controller->action->id;
         if(\Yii::$app->user->can($action)){
             return true;
