@@ -48,7 +48,7 @@ class DefaultController extends Controller
         $tmpStr = implode( $tmpArr );
         $tmpStr = sha1( $tmpStr );
 
-        if( $signature = $signature ){
+        if( $signature = $tmpStr ){
             return true;
         }else{
             return false;
