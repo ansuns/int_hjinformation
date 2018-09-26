@@ -104,4 +104,9 @@ class DefaultController extends Controller
             return false;
         }
     }
+
+    public function actionAlipay()
+    {
+        echo "success";
+    }
 }
