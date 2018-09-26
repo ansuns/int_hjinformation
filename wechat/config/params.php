@@ -10,7 +10,7 @@ return [
 
         'log' => [
             'level' => 'debug',
-            'file' => __DIR__.'/wechat.log',
+            'file' => Yii::$app->getRuntimePath() . "/logs/wechat.log',
         ],
     ]
 ];
