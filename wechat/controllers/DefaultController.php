@@ -20,6 +20,7 @@ use wechat\models\ContactForm;
  */
 class DefaultController extends Controller
 {
+    public $enableCsrfValidation = false;
     public function actionIndex()
     {
         $config = Yii::$app->params['wechat'];
@@ -32,7 +33,7 @@ class DefaultController extends Controller
         $response = $app->server->serve();
 
         // 将响应输出
-       return $response; // Laravel 里请使用：return $response;
+        $response->send(); // Laravel 里请使用：return $response;
 
     }
 
