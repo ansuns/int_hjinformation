@@ -3,7 +3,6 @@ return [
     'adminEmail' => 'admin@example.com',
     'supportEmail' => 'support@example.com',
     'user.passwordResetTokenExpire' => 3600,
-    //订阅号
     'wechat' => [
         'app_id' => 'wxf732bcda33f3fdac',
         'secret' => '46e25b70ce9008400a8a654681bfc786',

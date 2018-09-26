@@ -1,0 +1,54 @@
+[2018-09-26 10:12:11] NULL.INFO: >>>>>>>>
+POST /cgi-bin/menu/create?access_token=14_f5-gG6OB_phTZZqyGmYkJS0Gy8S3qnOOuNajoNK4HUQpAUT39zJYDhLbYjiPQxlX_tOmd3uL_gexYIyvhpYKqtfEWjiE0jKTzRq8PQ1yPPDjq555zQkI9KZXelhiGeiBFkEUEfFQ785p-w61FMVaAHALSB HTTP/1.1
+Host: api.weixin.qq.com
+Content-Length: 295
+User-Agent: GuzzleHttp/6.3.3 curl/7.59.0 PHP/7.2.4
+Content-Type: application/json
+
+{"button":[{"type":"click","name":"今日歌曲","key":"V1001_TODAY_MUSIC"},{"name":"菜单","sub_button":[{"type":"view","name":"搜索","url":"http:\/\/www.soso.com\/"},{"type":"view","name":"视频","url":"http:\/\/v.qq.com\/"},{"type":"click","name":"赞一下我们","key":"V1001_GOOD"}]}]}
+<<<<<<<<
+HTTP/1.1 200 OK
+Connection: keep-alive
+Date: Wed, 26 Sep 2018 10:12:10 GMT
+Content-Type: application/json; encoding=utf-8
+Content-Length: 69
+
+{"errcode":48001,"errmsg":"api unauthorized hint: [vMdtbA07294694!]"}
+--------
+NULL  
+[2018-09-26 10:12:13] NULL.INFO: >>>>>>>>
+POST /cgi-bin/menu/create?access_token=14_f5-gG6OB_phTZZqyGmYkJS0Gy8S3qnOOuNajoNK4HUQpAUT39zJYDhLbYjiPQxlX_tOmd3uL_gexYIyvhpYKqtfEWjiE0jKTzRq8PQ1yPPDjq555zQkI9KZXelhiGeiBFkEUEfFQ785p-w61FMVaAHALSB HTTP/1.1
+Host: api.weixin.qq.com
+Content-Length: 295
+User-Agent: GuzzleHttp/6.3.3 curl/7.59.0 PHP/7.2.4
+Content-Type: application/json
+
+{"button":[{"type":"click","name":"今日歌曲","key":"V1001_TODAY_MUSIC"},{"name":"菜单","sub_button":[{"type":"view","name":"搜索","url":"http:\/\/www.soso.com\/"},{"type":"view","name":"视频","url":"http:\/\/v.qq.com\/"},{"type":"click","name":"赞一下我们","key":"V1001_GOOD"}]}]}
+<<<<<<<<
+HTTP/1.1 200 OK
+Connection: keep-alive
+Date: Wed, 26 Sep 2018 10:12:12 GMT
+Content-Type: application/json; encoding=utf-8
+Content-Length: 69
+
+{"errcode":48001,"errmsg":"api unauthorized hint: [p.IrQa07324696!]"}
+--------
+NULL  
+[2018-09-26 10:12:15] NULL.INFO: >>>>>>>>
+POST /cgi-bin/menu/create?access_token=14_f5-gG6OB_phTZZqyGmYkJS0Gy8S3qnOOuNajoNK4HUQpAUT39zJYDhLbYjiPQxlX_tOmd3uL_gexYIyvhpYKqtfEWjiE0jKTzRq8PQ1yPPDjq555zQkI9KZXelhiGeiBFkEUEfFQ785p-w61FMVaAHALSB HTTP/1.1
+Host: api.weixin.qq.com
+Content-Length: 295
+User-Agent: GuzzleHttp/6.3.3 curl/7.59.0 PHP/7.2.4
+Content-Type: application/json
+
+{"button":[{"type":"click","name":"今日歌曲","key":"V1001_TODAY_MUSIC"},{"name":"菜单","sub_button":[{"type":"view","name":"搜索","url":"http:\/\/www.soso.com\/"},{"type":"view","name":"视频","url":"http:\/\/v.qq.com\/"},{"type":"click","name":"赞一下我们","key":"V1001_GOOD"}]}]}
+<<<<<<<<
+HTTP/1.1 200 OK
+Connection: keep-alive
+Date: Wed, 26 Sep 2018 10:12:14 GMT
+Content-Type: application/json; encoding=utf-8
+Content-Length: 69
+
+{"errcode":48001,"errmsg":"api unauthorized hint: [RVLdEa07344682!]"}
+--------
+NULL  
