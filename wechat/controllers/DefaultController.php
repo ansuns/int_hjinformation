@@ -109,4 +109,9 @@ class DefaultController extends Controller
     {
         echo "success";
     }
+
+    public function actionAlipayRedirect()
+    {
+        echo "success";
+    }
 }
