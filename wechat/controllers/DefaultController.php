@@ -26,6 +26,9 @@ class DefaultController extends Controller
         $app = Factory::officialAccount($config);
         $response = $app->server->serve();
 
+        $app->server->push(function ($message) {
+            return "您好！:".$message;
+        });
         // 将响应输出
         $response->send(); // Laravel 里请使用：return $response;
 
